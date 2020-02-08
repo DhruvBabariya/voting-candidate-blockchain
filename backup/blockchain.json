@@ -1,0 +1,12 @@
+{
+  "chain": [
+    {
+      "timestamp": "Genesis time",
+      "lastHash": "----",
+      "hash": "fir57-h45h",
+      "data": [],
+      "publicKey": "x",
+      "signature": "sign"
+    }
+  ]
+}
