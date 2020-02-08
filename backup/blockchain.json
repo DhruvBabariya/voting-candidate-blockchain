@@ -7,6 +7,24 @@
       "data": [],
       "publicKey": "x",
       "signature": "sign"
+    },
+    {
+      "timestamp": 1581164743178,
+      "lastHash": "fir57-h45h",
+      "hash": "ce95f8efbad6774fc8d7a1bfe0aff76a2f6b8ac330f79a23a4963a2f2038b5d6",
+      "data": {
+        "data": {
+          "candidateId": "123132"
+        },
+        "candidatePubKey": "323423234",
+        "referenceNo": "234234232"
+      },
+      "publicKey": "047d4f8be7346749ab6b9adbbb7c3031492160ce0da937b6ac1d09763f14dcb88dd7466ff3d83de07d1f2fe39187741f39419e0e70e987c7d9f2b12fd70b3f1f2d",
+      "signature": {
+        "r": "777a1bfb74669dcb978f34f7cfc46b888c1a3d90379dcf36b590f0b58e3adf1",
+        "s": "8205b063c6149d680f38a058a0512b20d2ca218235f051326623723d834f1611",
+        "recoveryParam": 0
+      }
     }
   ]
 }

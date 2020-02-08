@@ -7,7 +7,7 @@ const { BACKUP_PATH, BACKUP_DIR } = require('../config');
 const ChainUtil = require('../chain-util');
 const axios = require('axios');
 
-const HTTP_PORT = process.env.HTTP_PORT || 3001;
+const HTTP_PORT = process.env.HTTP_PORT || 3004;
 
 const app = express();
 const bc = new Blockchain();
@@ -59,9 +59,11 @@ app.post('/api/mine', async (req, res) => {
 
 	p2pServer.syncChains();
 
-	await axios.post('http://localhost:4000/api/update/publicKey', {
-		userId: req.body.userId,
-		publicKey: block.publicKey
+	await axios.post('http://localhost:8000/api/candidate-publickey', {
+		candidate_id: block.data.candidate_id,
+		candidate_name: block.data.candidate_name,
+		party_name: block.data.party_name,
+		candidate_publickey: block.publicKey
 	})
 		.then((el) => console.log("success"))
 		.catch((e) => console.log(e));
@@ -76,9 +78,11 @@ app.post('/api/update', async (req,res) => {
 	p2pServer.syncChains();
 
 
-	await axios.post('http://localhost:4000/api/update/publicKey', {
-		userId: req.body.userId,
-		publicKey: block.publicKey
+	await axios.post('http://localhost:8000/api/candidate-publickey', {
+		candidate_id: block.data.candidate_id,
+		candidate_name: block.data.candidate_name,
+		party_name: block.data.party_name,
+		candidate_publickey: block.publicKey
 	})
 		.then((el) => console.log("success"))
 		.catch((e) => console.log(e));
